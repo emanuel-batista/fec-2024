@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Meow+Script&display=swap');
 
-*{
-    font-family: "Montserrat";
+* {
+    font-family: "Montserrat" !important;
     margin: 0;
     padding: 0;
     text-decoration: none;
     /* background-image: url("landing.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    object-fit: cover; */
+        background-repeat: no-repeat;
+        background-position: center;
+        object-fit: cover; */
     /* width: 99.137%; */
     max-width: 100% !important;
     height: 100%;
@@ -17,35 +17,37 @@
     margin-right: 3%;
 }
 
-body{
-    font-family: "Montserrat";
+body {
+    font-family: "Montserrat" !important;
     background-image: url("landing.jpg");
     background-repeat: repeat;
     background-position: center;
     object-fit: cover;
 }
 
-* a{
-    color: white;
-    text-decoration: none;
+* a {
+    color: white !important;
+    text-decoration: none !important;
 }
 
-* li{
-    list-style: none;
+* li {
+    list-style: none !important;
 }
+
+/* tags index */
 
 /* sessão header */
 
-
-header{
+header {
     display: flex;
     flex-direction: row;
     height: 10%;
-    justify-content: space-between; 
-   /*  backdrop-filter: blur(50px) */;
+    justify-content: space-between;
+    /*  backdrop-filter: blur(50px) */
+    ;
 }
 
-header h1{
+header h1 {
     max-width: 50%;
     width: 50%;
     display: flex;
@@ -53,20 +55,21 @@ header h1{
     align-items: center;
 }
 
-h1 a{
-    font-family: "Meow Script";
-    color: #B7A835;
+h1 a {
+    font-family: "Meow Script" !important;
+    color: #B7A835 !important;
     font-size: 48px;
     height: fit-content;
 }
 
 
 
-.links{
+.links {
     width: 50%;
+    display: contents;
 }
 
-.links ul{
+.links ul {
     font-weight: bold;
     display: flex;
     align-items: center;
@@ -79,34 +82,38 @@ h1 a{
     max-height: 100%;
 }
 
-.links li{
+.links li {
     height: fit-content;
 }
 
-.links li a{
+.links li a {
     font-size: 16px;
     white-space: nowrap;
-    transition: 300ms;
+    transition: 300ms ease-in !important;
+}
+
+.dropdown {
+    display: none;
 }
 
 .links li a:hover {
-    text-decoration: underline 0.15em #B7A835;
+    text-decoration: underline 0.15em #B7A835 !important;
 }
 
 /* fim da sessão header */
 
-.reserva{
+.reserva {
     max-height: 90%;
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
-.reserva .img{
+.reserva .img {
     height: auto;
 }
 
-.reserva .img img{
+.reserva .img img {
     object-fit: cover;
     width: 456px;
     height: 532.8px;
@@ -114,7 +121,7 @@ h1 a{
 
 }
 
-.reserva .botao-reservar{
+.reserva .botao-reservar {
     height: 200px;
     width: 400px;
     background-image: url(mesinha.svg);
@@ -125,15 +132,20 @@ h1 a{
     justify-content: center;
 }
 
-.reserva .botao-reservar h2{
+.reserva .botao-reservar h2 {
     height: auto;
     position: absolute;
     top: 51%;
     right: 22.3%;
     font-size: 30px;
+    font-weight: bold !important;
 }
 
-@media only screen and (min-width: 768px) {
+/* fim do reservar */
+
+/* fim do index */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
     .reserva .img img {
         object-fit: contain;
         width: 500px;
@@ -156,10 +168,131 @@ h1 a{
     }
 }
 
-@media only screen and (min-width: 640px) {
-    .links{
+@media only screen and (max-width: 768px) {
+    h1 a {
+        font-size: 25px;
+    }
+
+    .links ul {
         display: none;
     }
 
-    
+    .reserva .img img {
+        object-fit: contain;
+        width: 250px;
+        -webkit-user-drag: none;
+        height: auto;
+    }
+
+    .reserva {
+        max-height: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .reserva .botao-reservar h2 {
+        height: auto;
+        position: absolute;
+        top: 67.5%;
+        right: 35%;
+        font-size: 30px;
+    }
+
+    .dropdown {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .dropdown-toggle {
+        background-color: transparent !important;
+        border: none;
+    }
+
+    .dropdown-toggle img {
+        object-fit: contain;
+        width: 50px !important;
+    }
+
+    ul .dropdown-menu {
+        background-color: #B7A835 I !important;
+        font-family: "Montserrat" !important;
+        font-weight: bold !important;
+    }
+}
+
+/* pagina reservar inicio */
+
+.form-reservar{
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    max-height: 90% !important;
+}
+
+.form-reservar form{
+    display: flex;
+    flex-direction: column !important;
+    height: 50%;
+    width: 30% !important;
+    background-color: #B7A835;
+    padding: 20px;
+    border-radius: 20px;
+    justify-content: space-around;
+}
+
+.form-reservar form h2{
+    height: auto;
+    color: white !important;
+    font-weight: bold !important;
+    margin: 0;
+    align-self: center;
+}
+
+.form-reservar form input{
+    height: 30px !important;
+    font-family: "Montserrat" !important;
+    margin-bottom: 20px;
+    background-color: #70672100;
+    border-color: transparent;
+    border-bottom: 1px solid #ffffff;
+    color: white !important;
+    padding: 10px;
+    transition: 300ms linear !important;
+}
+
+.form-reservar form input:hover{
+    border-bottom: 3px solid #ffffff !important;
+}
+
+.form-reservar form input:focus-visible{
+   /*  border-color: transparent !important;
+    border-bottom: 1px solid #ffffff !important; */
+    outline: none;
+}
+
+
+.form-reservar form input::placeholder{
+    color: white;
+    /* padding-left: 10px; */
+}
+
+.form-reservar form button{
+    height: auto;
+    width: 30%;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    align-self: center;
+}
+
+.form-reservar form .inputs{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 0;
+    margin: 0;
 }

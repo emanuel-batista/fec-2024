@@ -4,24 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-    <title>Epom Gourmet</title>
+    <title>Epom Gourmet - reservar</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
     <header>
-        <h1><a href="index.html">Epom Gourmet</a></h1>
+        <h1><a href="../index.html">Epom Gourmet</a></h1>
         <div class="links">
             <ul>
-                <li><a href="pages/reservar.html">reservar</a></li>
+                <li><a href="#">reservar</a></li>
                 <li><a href="#">conheça nosso chefe</a></li>
             </ul>
             <div class="dropdown">
                 <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="menu.svg" alt="">
+                    <img src="../menu.svg" alt="">
                 </button>
                 <ul class="dropdown-menu" style="background-color: #B7A835; height: 50vh !important;">
                     <li><a class="dropdown-item" href="#">Action</a></li>
@@ -31,17 +30,25 @@
             </div>
         </div>
     </header>
-    <div class="reserva">
-        <div class="img">
-            <img src="facareserva.png" alt="faça sua reserva">
-        </div>
-        <div class="botao-reservar">
-            <h2><a href="#">reservar</a></h2>
-        </div>
+
+    <div class="form-reservar">
+        <form action="#">
+            <h2>reserve sua mesa:</h2>
+            <div class="inputs">
+                <input type="text" placeholder="Digite seu nome" class="nome" required="true">
+                <input type="number" placeholder="Digite quantas pessoas estarão na mesa" class="pessoas-mesa"
+                    required="true">
+                <input type="text" placeholder="Digite seu número de telefone:" class="pessoas-mesa" id="phone-number"
+                    data-mask-selectonfocus="true" required="true">
+            </div>
+            <button type="submit">reservar</button>
+        </form>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script src="config.js"></script>
 </body>
 
 </html>
