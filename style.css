@@ -235,7 +235,7 @@ h1 a {
 .form-reservar form{
     display: flex;
     flex-direction: column !important;
-    height: 50%;
+    height: 70%;
     width: 30% !important;
     background-color: #B7A835;
     padding: 20px;
@@ -295,4 +295,27 @@ h1 a {
     height: auto;
     padding: 0;
     margin: 0;
+}
+
+.form-reservar form label {
+    color: white; 
+    font-family: "Montserrat"; 
+    margin-bottom: 5px; 
+}
+
+.form-reservar form textarea {
+    font-family: "Montserrat" !important;
+    background-color: #70672100;
+    border-color: transparent;
+    border-bottom: 1px solid #ffffff;
+    color: white !important;
+    padding: 10px;
+    resize: vertical; 
+    margin-bottom: 20px;
+}
+
+.form-reservar form input:focus-visible, 
+.form-reservar form textarea:focus-visible {
+    outline: none;
+    border-bottom: 3px solid #ffffff !important;
 }
