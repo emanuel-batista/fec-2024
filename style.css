@@ -210,6 +210,25 @@ h1 a {
         border: none;
     }
 
+    .dropdown .show{
+        width: 100px !important;
+        margin-right: 50px;
+        text-wrap: wrap;
+        max-height: fit-content !important;
+    }
+
+    .show{
+        height: fit-content !important;
+        max-height: fit-content !important;
+    }
+    
+    /* .dropdown-menu{
+        height: 80vh !important;
+    } */
+
+    .show li a{
+        text-wrap: wrap;
+    }
     .dropdown-toggle img {
         object-fit: contain;
         width: 50px !important;
@@ -219,6 +238,13 @@ h1 a {
         background-color: #B7A835 I !important;
         font-family: "Montserrat" !important;
         font-weight: bold !important;
+    }
+
+
+    /* pagina reservar responsiva */
+
+    .form-reservar form{
+        width: 90% !important;
     }
 }
 
@@ -236,7 +262,7 @@ h1 a {
     display: flex;
     flex-direction: column !important;
     height: 50%;
-    width: 30% !important;
+    width: 30%;
     background-color: #B7A835;
     padding: 20px;
     border-radius: 20px;
