@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <title>Epom Gourmet</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <h1><a href="../../index.html">Epom Gourmet</a></h1>
+        <div class="links">
+            <ul>
+                <li><a href="../reservar.html">reservar</a></li>
+                <li><a href="../conhecachefe.html">conheça nosso chefe</a></li>
+            </ul>
+            <div class="dropdown">
+                <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="../../menu.svg" alt="">
+                </button>
+                <ul class="dropdown-menu" style="background-color: #B7A835;">
+                    <li><a class="dropdown-item" href="../reservar.html"><b>reservar</b></a></li>
+                    <li><a class="dropdown-item" href="../conhecachefe.html"><b>conheça nosso chefe</b></a></li>
+                    <li><a class="dropdown-item" href="fila.html"><b>verificar fila</b></a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="verificarFila">
+        <form action="" class="verificarFilaForm">
+            <h2>está na fila de espera? verifique sua posição aqui!</h2>
+            <input type="text" placeholder="digite o número de celular informado na recepção" name="ncelular"
+                class="ncelularFila">
+            <button onclick="verificar()">verificar</button>
+        </form>
+    </div>
+
+    <div class="posicaoFila">
+        <div class="tempoEspera">
+            <h2>sua posição na fila é:</h2>
+            <span>6</span>
+            <p>tempo de espera estimado: <b>40 minutos</b></p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+
+    <script>
+        document.querySelector('.posicaoFila').style.display = 'none';
+
+        function verificar() {
+            // Show posicaoFila
+            document.querySelector('.posicaoFila').style.display = 'flex';
+            document.querySelector('.verificarFila').style.display = 'none';
+
+            // Prevent reloading the page
+            event.preventDefault();
+        }
+    </script>
+
+</body>
+
+</html>

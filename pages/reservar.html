@@ -16,16 +16,16 @@
         <div class="links">
             <ul>
                 <li><a href="#">reservar</a></li>
-                <li><a href="#">conheça nosso chefe</a></li>
+                <li><a href="   conhecachefe.html">conheça nosso chefe</a></li>
             </ul>
             <div class="dropdown">
                 <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <img src="../menu.svg" alt="">
                 </button>
                 <ul class="dropdown-menu" style="background-color: #B7A835; height: 150px !important;">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li><a class="dropdown-item" href="reservar.html"><b>reservar</b></a></li>
+                    <li><a class="dropdown-item" href="conhecachefe.html"><b>conheça nosso chefe</b></a></li>
+                    <li><a class="dropdown-item" href="fila/fila.html"><b>verificar fila</b></a></li>
                 </ul>
             </div>
         </div>
@@ -35,18 +35,20 @@
         <form action="#">
             <h2>reserve sua mesa:</h2>
             <div class="inputs">
-                <input type="text" placeholder="Digite seu nome:" class="nome" required="true"\>
+                <input type="text" placeholder="Digite seu nome:" class="nome" required="true" id="nome">
                 <input type="number" placeholder="Digite quantas pessoas estarão na mesa:" class="pessoas-mesa"
-                    required="true"\>
-                <input type="text" placeholder="Digite seu número de telefone:" class="pessoas-mesa" id="phone-number" data-mask-selectonfocus="true" required="true"\>
+                    required="true" \>
+                <input type="text" placeholder="Digite seu número de telefone:" class="pessoas-mesa" id="phone-number"
+                    data-mask-selectonfocus="true" required="true" \>
                 <label for="dia-reserva">Escolha o dia:</label>
-                <input type="date" id="dia-reserva" name="dia-reserva" class="dia-reserva" required="true"\>
+                <input type="date" id="dia-reserva" name="dia-reserva" class="dia-reserva" required="true" \>
                 <label for="hora-reserva">Escolha o horário:</label>
-                <input type="time" id="hora-reserva" name="hora-reserva" class="hora-reserva" required="true"\>
+                <input type="time" id="hora-reserva" name="hora-reserva" class="hora-reserva" required="true" \>
                 <label for="notas-adicionais">Notas adicionais:</label>
-                <textarea id="notas-adicionais" name="notas-adicionais" class="notas-adicionais" placeholder="Ex: Mesa perto da janela" rows="4"></textarea>
+                <textarea id="notas-adicionais" name="notas-adicionais" class="notas-adicionais"
+                    placeholder="Ex: Mesa perto da janela" rows="4"></textarea>
             </div>
-            <button type="submit">reservar</button>
+            <button type="submit" onclick="reservar()">reservar</button>
         </form>
     </div>
 
@@ -54,6 +56,12 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="config.js"></script>
+    <script>
+        function reservar() {
+            let nome = document.getElementById('nome').value; // Get the value from the input field
+            alert(`Reserva efetuada com sucesso, ${nome}!`); // Display alert with retrieved name
+        }
+    </script>
 </body>
 
 </html>
